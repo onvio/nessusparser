@@ -211,6 +211,8 @@ def severitystyle(ws):
         
         if fill_color:
             fill = openpyxl.styles.PatternFill(start_color=fill_color, end_color=fill_color, fill_type="solid")
+            border = openpyxl.styles.Side(style="thin", color="F05025")
+            cell.border = openpyxl.styles.Border(left=border, right=border, top=border, bottom=border)
             cell.fill = fill
 
 
