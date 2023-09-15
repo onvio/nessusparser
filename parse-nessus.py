@@ -65,7 +65,7 @@ def getargs():
     parser = argparse.ArgumentParser(description="Merge all .nessus files within a folder into one .csv report in that folder", formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument(type=str, dest="directory", help="Folder containing .nessus files")
     parser.add_argument('--split', action='store_true', help="Split data")
-    parser.add_argument('--minsev', type=str, help="Severity Filter")
+    parser.add_argument('--minsev', type=str, help="Severity Filter (critical, high, medium, low)")
     args = parser.parse_args()
     return args
 
